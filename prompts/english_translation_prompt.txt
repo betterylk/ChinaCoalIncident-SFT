@@ -1,0 +1,33 @@
+[Input unit]
+Translate exactly one accepted Chinese JSONL record at a time; do not
+construct a new incident from the official report during this stage.
+
+[Identifier control]
+Copy incident_id and province_case_id exactly. Do not renumber, reorder,
+merge, or split incidents.
+
+[Structural control]
+Preserve the JSON hierarchy, field names, three-message role order, array
+membership, null values, dates, times, numerical counts, and
+official-report URL.
+
+[Text translation]
+Translate the task, message content, overview, equipment labels, accident
+categories, mine and location names, personnel descriptors, and source
+descriptors into clear English. Preserve the chronology and the separation
+among mechanism, direct cause, contributing factors, and recommendations.
+
+[Grounding]
+Do not add, omit, infer, or strengthen accident facts, causal findings,
+casualties, or recommendations. Resolve ambiguity by consulting the
+Chinese master record and its official source rather than inventing
+English content.
+
+[Quality control]
+Compare the Chinese and English records for matching identifiers, event
+order and count, numerical attributes, null status, and provenance fields;
+flag uncertain terminology for bilingual review.
+
+[Output]
+Return one valid English JSON object only, retaining the source record's
+incident_id.

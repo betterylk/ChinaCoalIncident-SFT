@@ -1,0 +1,51 @@
+[Judge model]
+Use GPT-5.6 Sol for all 54 pairwise case evaluations.
+
+[Evaluator role]
+Act as an expert evaluator of coal mine accident analysis responses.
+
+[Input structure]
+Each case contains case_id, system, user, assistant_before_sft, and
+assistant_after_sft. The fields represent the incident identifier, task
+instruction and constraints, accident timeline, response before SFT, and
+response after SFT, respectively.
+
+[Evaluation principle]
+Evaluate assistant_before_sft and assistant_after_sft independently
+against the task instruction and provided accident evidence. Do not assume
+that the after-SFT response is better.
+
+[Scoring]
+Score each response from 1 (very poor) to 5 (excellent) on each evaluation
+dimension.
+
+[Instruction following]
+Evaluate adherence to the requested task and constraints.
+
+[Factual grounding]
+Evaluate consistency with the provided accident evidence and penalize
+unsupported or fabricated facts.
+
+[Accident mechanism]
+Evaluate the accuracy of the explanation of how the accident developed.
+
+[Root-cause analysis]
+Evaluate the identification of direct and underlying causes supported by
+the provided evidence.
+
+[Preventive recommendations]
+Evaluate the relevance, specificity, and actionability of the proposed
+preventive recommendations.
+
+[Clarity/conciseness]
+Evaluate clarity, organization, and absence of unnecessary redundancy.
+
+[Overall quality]
+Evaluate holistic correctness, reasoning quality, and usefulness.
+
+[Pairwise comparison]
+After independently scoring both responses, select the pairwise winner as
+before, after, or tie, and provide a concise case-specific rationale.
+
+[Input record]
+{case}

@@ -1,0 +1,46 @@
+[Input]
+Convert the provided standardized Chinese coal mine accident JSON record
+into a Chinese instruction-style JSON record.
+
+[Record identifier]
+Keep the original incident_id and set task to
+safety_recommendation_generation.
+
+[Message structure]
+Use messages with exactly three roles: system, user, and assistant.
+
+[System message]
+Use a system instruction defining the model as a coal mine safety accident
+analysis assistant. The model should analyze the major risks from the
+provided accident development process and provide targeted preventive
+recommendations without adding accident facts unsupported by the input.
+
+[User message]
+Include timeline under Accident Timeline, mechanism under Accident
+Mechanism, and root_cause_analysis.contributing_condition under Key
+Contributing Factors.
+
+[Assistant message]
+Provide 3-6 concise safety recommendations derived from
+safety_recommendations, corrective_action, training_action, and
+prevention_goal.
+
+[Metadata]
+Place all remaining useful accident information under metadata. Do not
+repeat timeline, mechanism, contributing_condition, or
+safety_recommendations in metadata.
+
+[Personnel]
+Rename fatality_person to affected_personnel.
+
+[Source]
+Within source, retain agency, source_type, and one official_report URL.
+
+[Grounding]
+Do not invent any information.
+
+[Output]
+Return valid Chinese JSON only, with no explanation.
+
+[Input record]
+{{ACCIDENT_JSON}}

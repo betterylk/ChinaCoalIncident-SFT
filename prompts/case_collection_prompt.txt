@@ -1,0 +1,99 @@
+[Input and review]
+For [Province], inspect all cases listed in [Links file], including
+downloadable reports and official webpages. Download available accident
+materials and generate/revise standardized JSONL records. Review every
+PDF/webpage case by case; do not fabricate accident content using scripts
+or templates.
+
+[Source verification]
+Retain only cases supported by local source material and an accessible,
+verifiable official link, preferably from the National Mine Safety
+Administration, its provincial bureaus, or government websites. Verify
+that each case page, report, and JSONL record refer to the same mine,
+date, and accident.
+
+[File organization]
+Move PDFs without a verified official link to [Province]/Unverified
+official links/. Store verified PDFs in [Province]/Good/source/ and
+corresponding JSONL cases in [Province]/Good/cases/.
+
+[Source grounding]
+Base every field strictly on the original report; never infer missing
+information. Use "none" or an empty field only when information is not
+explicitly available.
+
+[Privacy]
+Remove all real personal names and identifiable name forms; replace them
+with roles such as "team leader", "worker", "safety inspector", "injured
+person", or "on-site personnel".
+
+[Text cleaning]
+Remove OCR noise, garbled text, placeholders, "????", headers/footers,
+repeated titles, and broken fragments.
+
+[Cross-checking]
+Cross-check accident date/time, type, fatalities, mine information,
+location, equipment, casualties, and other fields against the original
+report.
+
+[overview]
+Write 1-3 Chinese sentences summarizing the accident time,
+location/worksite, accident type, casualties, and direct economic loss
+when explicitly stated.
+
+[mechanism]
+Write one concise Chinese paragraph describing the complete sequence: work
+performed -> triggering event -> injury/death. Do not copy the report or
+merely repeat the accident title.
+
+[timeline]
+Construct a complete chronological Chinese timeline from the accident
+process, emergency response, reporting, and related sections. Each entry
+must follow {"time":"YYYY-MM-DD HH:MM","event":"concise complete Chinese
+event"}. When available, cover pre-shift meeting/mine entry/worksite
+arrival -> work arrangements/key operations -> accident ->
+discovery/initial response -> rescue/transportation -> medical
+confirmation/reporting. Use only explicitly reported times; preserve
+approximate precision and never fabricate minutes.
+
+[root_cause_analysis.]
+root_cause: condense the direct cause into a concise and complete
+statement.
+
+[contributing_condition]
+Condense the principal indirect causes; do not copy entire paragraphs from
+the investigation report.
+
+[corrective_action]
+Extract concise corrective requirements explicitly supported by the
+original report; exclude OCR fragments and boilerplate.
+
+[training_action]
+Extract concise training requirements explicitly supported by the original
+report; exclude OCR fragments and boilerplate.
+
+[prevention_goal]
+Extract concise prevention objectives explicitly supported by the original
+report; exclude OCR fragments and boilerplate.
+
+[safety_recommendations]
+Extract concise safety recommendations explicitly supported by the
+original report; exclude OCR fragments and boilerplate.
+
+[source]
+Record the official agency, source type, accessible case_page, and local
+report filename/formal report link. Verify every external link
+individually.
+
+[Acceptance]
+Verify every field in every JSONL record. Each retained case must contain
+a non-empty, chronologically ordered timeline that explains the complete
+accident process. Do not retain real names, placeholders, "????", garbled
+text, large verbatim passages, or invalid, inaccessible, mismatched, or
+non-official links.
+
+[Output summary]
+Report the number of retained cases and PDFs moved to the unverified
+directory. For each retained case, report its filename, accident summary,
+timeline-event count, and official link. List cases with insufficient or
+unverifiable source material.
