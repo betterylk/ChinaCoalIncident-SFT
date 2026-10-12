@@ -1,6 +1,6 @@
 # ChinaCoalIncident-SFT
 
-ChinaCoalIncident-SFT is a bilingual instruction dataset derived from official reports on 541 coal-mine accidents across 21 provincial-level jurisdictions in China (2014–2026). The Chinese master records contain 5,952 chronological events. Each incident pairs a timeline with a reference analysis of the accident mechanism, causes, and preventive recommendations, and retains structured metadata and a link to its official source. The aligned Chinese and English corpora represent the **same 541 incidents**, not 1,082 independent accidents.
+ChinaCoalIncident-SFT is a bilingual instruction dataset derived from official reports on 541 coal-mine accidents across 21 provincial-level jurisdictions in China (2014–2026). The Chinese master records contain 5,952 chronological events. Each incident pairs a timeline with a reference analysis of the accident mechanism, causes, and preventive recommendations, and retains structured metadata and a link to its official source. The aligned Chinese and English corpora represent the **same 541 incidents**.
 
 ## Release status
 
