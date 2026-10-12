@@ -36,6 +36,3 @@ The corpus is a curated collection of **available official-report material**, no
 
 The dataset is intended for research on accident-timeline interpretation, information extraction, retrieval, translation assessment, and language-model adaptation. Its reference analyses and model outputs should not be treated as legal findings or operational safety instructions. The released records require final review of residual personal-name forms, translation artefacts, and date/time inconsistencies before unrestricted redistribution.
 
-## Manuscript and contact
-
-The accompanying *Data in Brief* manuscript is authored by Lingkai Yang, Guangfu Wang, Liang Fan, Zhi Chen, Yu Qin, Zhengyifan Song, and Jie Zhu. Correspondence: **Liang Fan** (L.Fan@lboro.ac.uk). Publication and dataset citation details will be added when available.
